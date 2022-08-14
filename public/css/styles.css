@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap');
+
+:root {
+
+    /* font-families */
+    --ff-Bungee-hairline: 'Bungee Hairline', cursive;
+    --ff-Bungee-Shade: 'Bungee Shade', cursive;
+    --ff-Bungee: 'Bungee', cursive;
+}
+
+/* Box sizing */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
