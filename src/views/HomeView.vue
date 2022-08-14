@@ -22,7 +22,7 @@ const LoadPost = async() =>{
 // }
 
 onMounted(async() => {
-  // Scroll();
+  Scroll();
   LoadPost();
   
 
@@ -30,27 +30,27 @@ onMounted(async() => {
 
 
 
-// const Scroll = () => {
-//   try{
+const Scroll = () => {
+  try{
 
-//     if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 20) {
-//       top.value.style.display = "block";
-//     } else{
-//       top.value.style.display = "none";
-//     }
-//   }catch(error){
-//     error
-//   }
-// };
+    if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 20) {
+      top.value.style.display = "block";
+    } else{
+      top.value.style.display = "none";
+    }
+  }catch(error){
+    error
+  }
+};
 
-// const ScrollTop = () => {
-//   document.body.scrollTop = 0; // For Safari
-//   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-// };
+const ScrollTop = () => {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+};
 
-// window.onscroll = function () {
-//   Scroll();
-// };
+window.onscroll = function () {
+  Scroll();
+};
 </script>
 
 <template>
@@ -73,15 +73,14 @@ onMounted(async() => {
           <h2 class="card__title">{{post.title}}</h2>
           <p class="card__description" v-html="post.content">
           </p>
-          <button>Show Post</button>
-          <!-- <router-link :to="{name: 'Showpost', params:{title:post.title, description:post.content}}"><button>Show Post</button></router-link> -->
+          <!-- <button>Show Post</button> -->
+          <router-link :to="{name: 'Showpost', params:{title:post.title, description:post.content}}"><button>Show Post</button></router-link>
         </div>
       </div>
     </div>
     
-    <!-- <button @click="ScrollTop" ref="top" class="top"><img src="../../public/img/arrow-up-solid.svg" alt=""></button> -->
     <!-- Scroll bar -->
-    <!-- <div class="top-svg">
+    <div class="top-svg">
       <img
         @click="ScrollTop"
         ref="top"
@@ -89,7 +88,7 @@ onMounted(async() => {
         src="../../public/img/arrow-up-solid.svg"
         alt=""
       />
-    </div> -->
+    </div>
   </div>
 </template>
 
